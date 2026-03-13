@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #ff4d00; /* Neon Orange */
+  --color-zinc-950: #09090b;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Outfit", serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-zinc-900 antialiased selection:bg-primary selection:text-white;
+  }
+
+  h1, h2, h3, h4 {
+    @apply tracking-tighter;
+  }
+}
+
+@layer utilities {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/10;
+  }
+}
+
+@keyframes pulse-cta {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 77, 0, 0.4); }
+  50% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255, 77, 0, 0); }
+}
+
+.animate-pulse-cta {
+  animation: pulse-cta 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-zinc-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-full border-4 border-zinc-950 hover:bg-zinc-700;
+}

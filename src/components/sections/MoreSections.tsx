@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Star, Quote, Instagram, Users, ShieldCheck, Rainbow } from 'lucide-react';
 import { Section } from '../ui/base';
-import { TESTIMONIALS, SITE_CONFIG } from '../../constants';
+import { TESTIMONIALS, SITE_CONFIG, IMAGES } from '../../constants';
 
 export const Testimonials = () => {
   return (
@@ -11,10 +11,10 @@ export const Testimonials = () => {
         <div>
           <h2 className="text-4xl md:text-6xl font-black mb-4 tracking-tighter">
             Resultados de <br />
-            <span className="text-primary italic">quem já está lá.</span>
+            <span className="text-primary italic">quem já chegou lá.</span>
           </h2>
           <p className="text-zinc-400 max-w-md">
-            Mais de 120 avaliações 5 estrelas no Google e centenas de vidas transformadas.
+            Veja como o nosso acompanhamento mudou a rotina e a saúde de nossos alunos.
           </p>
         </div>
         <div className="flex items-center gap-4 bg-white/5 border border-white/10 p-6 rounded-3xl">
@@ -22,7 +22,7 @@ export const Testimonials = () => {
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-5 h-5 fill-current" />)}
             </div>
             <span className="font-black text-xl">5.0</span>
-            <span className="text-zinc-500 text-sm uppercase tracking-widest font-bold">Avaliação Google</span>
+            <span className="text-zinc-500 text-sm uppercase tracking-widest font-bold">Avaliação dos Alunos</span>
         </div>
       </div>
 
@@ -49,7 +49,7 @@ export const Testimonials = () => {
               </div>
               <div>
                 <span className="block font-black text-xl tracking-tight">{item.author}</span>
-                <span className="text-zinc-500 text-xs font-bold uppercase tracking-widest">Aluna SlimFit28</span>
+                <span className="text-zinc-500 text-xs font-bold uppercase tracking-widest">Aluno(a) Ativo(a)</span>
               </div>
             </div>
           </motion.div>
@@ -71,8 +71,8 @@ export const About = () => {
           >
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-2xl skew-x-1">
                 <img 
-                    src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop" 
-                    alt="Alê Lopes Personal Trainer" 
+                    src={IMAGES.about} 
+                    alt={SITE_CONFIG.trainerName} 
                     className="w-full grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
                     referrerPolicy="no-referrer"
                 />
@@ -85,23 +85,23 @@ export const About = () => {
           
           <div>
             <span className="text-primary font-black tracking-widest uppercase text-sm block mb-4">Sobre o Treinador</span>
-            <h2 className="text-5xl md:text-7xl font-black mb-8 leading-[0.9] tracking-tighter">
-                ALÊ <span className="text-zinc-300">LOPES.</span>
+            <h2 className="text-5xl md:text-7xl font-black mb-8 leading-[0.9] tracking-tighter uppercase">
+                {SITE_CONFIG.trainerName.split(' ')[0]} <span className="text-zinc-300">{SITE_CONFIG.trainerName.split(' ').slice(1).join(' ')}</span>
             </h2>
             <p className="text-xl text-zinc-600 mb-10 leading-relaxed font-light">
-                "Não acredito em fórmulas mágicas. Acredito no movimento como ferramenta de autoconhecimento e empoderamento. Minha missão é ajudar mulheres a reconquistarem sua confiança através de um método sustentável e sem julgamentos."
+                "Conte aqui a sua história e a sua missão. Explique por que você decidiu ajudar pessoas através do fitness e qual é a sua filosofia de treino."
             </p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">
               <div className="flex flex-col gap-2 p-6 rounded-3xl bg-zinc-50 border border-zinc-100">
                 <Users className="text-primary w-8 h-8 mb-2" />
-                <span className="font-black text-xl tracking-tight">Especialista 30+</span>
-                <span className="text-sm text-zinc-500">Focado no metabolismo feminino.</span>
+                <span className="font-black text-xl tracking-tight">Personal Especialista</span>
+                <span className="text-sm text-zinc-500">Focado em resultados reais e duradouros.</span>
               </div>
               <div className="flex flex-col gap-2 p-6 rounded-3xl bg-zinc-50 border border-zinc-100">
                 <ShieldCheck className="text-primary w-8 h-8 mb-2" />
                 <span className="font-black text-xl tracking-tight">Certificado</span>
-                <span className="text-sm text-zinc-500">Anos de experiência comprovada.</span>
+                <span className="text-sm text-zinc-500">Profissional com experiência comprovada.</span>
               </div>
             </div>
 
@@ -114,10 +114,6 @@ export const About = () => {
                     <Instagram className="w-5 h-5 text-primary" />
                     ME SIGA NO INSTAGRAM
                 </a>
-                <div className="flex items-center gap-2 px-6 py-4 bg-zinc-100 rounded-full text-xs font-bold text-zinc-500 uppercase tracking-widest border border-zinc-200">
-                    <Rainbow className="w-4 h-4 text-primary" />
-                    Espaço LGBTQ+ Acolhedor
-                </div>
             </div>
           </div>
         </div>

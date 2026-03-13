@@ -8,11 +8,11 @@ export const Footer = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
           <div className="lg:col-span-1">
-            <h3 className="text-3xl font-black mb-8 tracking-tighter">
-                ALÊ<span className="text-primary italic">LOPES</span>
+            <h3 className="text-3xl font-black mb-8 tracking-tighter uppercase">
+                {SITE_CONFIG.brandName}<span className="text-primary italic">{SITE_CONFIG.brandBold}</span>
             </h3>
             <p className="text-zinc-400 mb-10 leading-relaxed font-light">
-              Transformando vidas através do movimento consciente e do emagrecimento sem sofrimento para mulheres.
+              Uma descrição curta e impactante sobre o seu negócio de consultoria online.
             </p>
             <div className="flex gap-4">
               <SocialLink href={SITE_CONFIG.instagram} icon={<Instagram className="w-6 h-6" />} />
@@ -46,7 +46,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-xs font-black uppercase tracking-[0.2em] text-primary mb-10">Novidades</h4>
             <p className="text-zinc-400 text-sm mb-6 leading-relaxed">
-                Receba dicas de treino e nutrição diretamente no seu e-mail.
+                Receba dicas exclusivas diretamente no seu e-mail.
             </p>
             <form className="relative">
                 <input 
@@ -62,7 +62,7 @@ export const Footer = () => {
         </div>
         
         <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-zinc-500 text-xs font-bold uppercase tracking-widest">
-          <p>© {new Date().getFullYear()} Alê Lopes Personal Trainer. Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} {SITE_CONFIG.brandName} {SITE_CONFIG.brandBold}. Todos os direitos reservados.</p>
           <div className="flex gap-10">
             <a href="#" className="hover:text-white transition-colors">Privacidade</a>
             <a href="#" className="hover:text-white transition-colors">Termos</a>

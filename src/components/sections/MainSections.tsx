@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Clock, UtensilsCrossed, Heart, Moon, Zap, Target, Sparkles, Flame } from 'lucide-react';
 import { Section, Badge } from '../ui/base';
+import { SITE_CONFIG, IMAGES } from '../../constants';
 
 export const PainPoints = () => {
   return (
@@ -12,13 +13,13 @@ export const PainPoints = () => {
             Cansada de tentar de tudo e <span className="text-primary italic">nada funcionar?</span>
         </h2>
         <p className="text-zinc-600 max-w-2xl text-lg md:text-xl font-light">
-            Se você se sente estagnada, sem disposição e descontente com o que vê no espelho, saiba que o problema não é você, mas o método que te venderam.
+            Se você se sente estagnada e sem disposição, saiba que o problema não é você, mas o método que te venderam até agora.
         </p>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         {[
-          { icon: Clock, title: "Falta de Tempo", desc: "A rotina corrida entre trabalho e família consome suas metas." },
+          { icon: Clock, title: "Falta de Tempo", desc: "A rotina corrida consome suas metas diárias." },
           { icon: UtensilsCrossed, title: "Fome Constante", desc: "Dietas restritivas que só aumentam sua ansiedade." },
           { icon: Heart, title: "Autoestima", desc: "Aquele sentimento de não se sentir bem com nenhuma roupa." },
           { icon: Moon, title: "Cansaço", desc: "Acordar moída e terminar o dia sem energia para nada." }
@@ -52,7 +53,7 @@ export const Method = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center relative z-10">
                 <div className="order-2 lg:order-1 relative">
                     <img 
-                      src="https://images.unsplash.com/photo-1599058917233-33923d309068?q=80&w=2070&auto=format&fit=crop" 
+                      src={IMAGES.method} 
                       alt="Treino eficiente" 
                       className="rounded-[3rem] shadow-2xl skew-y-1 grayscale contrast-125"
                       referrerPolicy="no-referrer"
@@ -63,25 +64,25 @@ export const Method = () => {
                 <div className="order-1 lg:order-2">
                     <Badge className="bg-primary/20 text-primary mb-6">O Caminho das Pedras</Badge>
                     <h2 className="text-4xl md:text-7xl font-black mb-10 leading-[0.9] tracking-tighter">
-                        MÉTODO <br />
-                        <span className="text-primary italic">EXPLOSÃO 28.</span>
+                        NOME DO <br />
+                        <span className="text-primary italic">{SITE_CONFIG.methodName}.</span>
                     </h2>
                     
                     <div className="space-y-10">
                         <MethodStep 
                             icon={<Zap className="w-6 h-6" />}
-                            title="Ativação Metabólica"
-                            text="Exercícios curtos e intensos que aceleram a queima mesmo em repouso."
+                            title="Pilar do Método 1"
+                            text="Explique aqui o primeiro grande diferencial do seu treinamento."
                         />
                         <MethodStep 
                             icon={<Flame className="w-6 h-6" />}
-                            title="Foco Feminino"
-                            text="Protocolos específicos para levantamento de bumbum e definição de core."
+                            title="Pilar do Método 2"
+                            text="Explique aqui o segundo grande diferencial do seu treinamento."
                         />
                         <MethodStep 
                             icon={<Sparkles className="w-6 h-6" />}
-                            title="Liberdade Total"
-                            text="Treine onde quiser, quando puder. Sem equipamentos obrigatórios."
+                            title="Pilar do Método 3"
+                            text="Explique aqui o terceiro grande diferencial do seu treinamento."
                         />
                     </div>
                 </div>

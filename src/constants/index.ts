@@ -1,12 +1,15 @@
 export const SITE_CONFIG = {
-  name: "Alê Lopes",
-  title: "Personal Trainer Online",
-  whatsapp: "https://wa.me/5511948314280?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20Consultoria%20SlimFit28.",
-  instagram: "https://www.instagram.com/alepersonal_/",
-  youtube: "https://www.youtube.com/@alelopespersonaltrainer9046",
-  email: "contato@alelopes.com.br",
-  address: "Av. Paulista - Baixo Augusta, São Paulo - SP",
-  phone: "(11) 94831-4280",
+  brandName: "YOUR",
+  brandBold: "BRAND",
+  trainerName: "Your Name",
+  specialty: "Personal Trainer Online",
+  methodName: "METHOD 28",
+  whatsapp: "https://wa.me/YOUR_PHONE?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20sua%20Consultoria.",
+  instagram: "https://www.instagram.com/YOUR_PROFILE/",
+  youtube: "https://www.youtube.com/YOUR_CHANNEL",
+  email: "contato@suamarca.com.br",
+  address: "Sua Cidade - Estado",
+  phone: "(00) 00000-0000",
 };
 
 export const NAVIGATION = [
@@ -20,58 +23,65 @@ export const NAVIGATION = [
 
 export const TESTIMONIALS = [
   {
-    text: "Com o Alê, eu aprendi que emagrecer não é só perder peso... é se fortalecer por dentro e por fora. E ele me ajudou nisso tudo, com amor e muita técnica.",
-    author: "Gaby Djubi"
+    text: "Espaço para depoimento da sua aluna. Conte como o seu método transformou a vida dela e os resultados alcançados.",
+    author: "Nome da Aluna 1"
   },
   {
-    text: "Ótimo profissional, super competente. Com ele tem resultado de verdade. Você é DEMAIS Alê!",
-    author: "Poliana Ketlyn"
+    text: "Espaço para depoimento da sua aluna. Conte como o seu método transformou a vida dela e os resultados alcançados.",
+    author: "Nome da Aluna 2"
   },
   {
-    text: "Eu já tinha desistido. Mas o Alê me fez tentar mais uma vez — e dessa vez, funcionou. Porque ele entende o que a gente sente, ele não julga, ele transforma.",
-    author: "Suh Caroline"
+    text: "Espaço para depoimento da sua aluna. Conte como o seu método transformou a vida dela e os resultados alcançados.",
+    author: "Nome da Aluna 3"
   }
 ];
 
 export const FAQ_ITEMS = [
   {
-    question: "Preciso ir à academia?",
-    answer: "Não! Os treinos são totalmente adaptáveis. Você pode treinar em casa, no parque ou na academia, de acordo com a sua realidade e os equipamentos que tiver disponível."
+    question: "Pergunta frequente 1?",
+    answer: "Sua resposta detalhada aqui para tirar a dúvida da sua futura cliente."
   },
   {
-    question: "Quanto tempo duram os treinos?",
-    answer: "Os treinos são focados em eficiência. Levam em média de 25 a 45 minutos, ideais para serem encaixados em rotinas corridas."
+    question: "Pergunta frequente 2?",
+    answer: "Sua resposta detalhada aqui para tirar a dúvida da sua futura cliente."
   },
   {
-    question: "Como funciona o acompanhamento?",
-    answer: "O acompanhamento é feito via WhatsApp e através da nossa plataforma exclusiva. Você terá suporte para tirar dúvidas sobre exercícios, postura e motivação."
+    question: "Pergunta frequente 3?",
+    answer: "Sua resposta detalhada aqui para tirar a dúvida da sua futura cliente."
   },
   {
-    question: "Tenho mais de 40 anos, o método serve para mim?",
-    answer: "Com certeza! O Método SlimFit28 é especialmente desenhado para mulheres 30+, respeitando o metabolismo e as necessidades específicas dessa fase da vida."
+    question: "Pergunta frequente 4?",
+    answer: "Sua resposta detalhada aqui para tirar a dúvida da sua futura cliente."
   }
 ];
 
 export const PRICING_PLANS = [
   {
-    name: "Slim Inicial",
-    price: "R$ 97/mês",
-    desc: "Ideal para começar",
-    features: ["Planilha de treinos mensal", "Suporte via App", "Guia de Nutrição Básico"],
+    name: "Plano Start",
+    price: "R$ 00,00",
+    desc: "Descrição curta do plano",
+    features: ["Vantagem 1", "Vantagem 2", "Vantagem 3"],
     recommended: false
   },
   {
-    name: "Vip Diamond",
-    price: "R$ 197/mês",
-    desc: "O mais escolhido",
-    features: ["Treinos Personalizados", "Suporte WhatsApp Prioritário", "Análise de Execução por Vídeo", "Plano Alimentar Estratégico"],
+    name: "Plano Pro",
+    price: "R$ 00,00",
+    desc: "O plano mais vendido",
+    features: ["Vantagem 1", "Vantagem 2", "Vantagem 3", "Vantagem 4"],
     recommended: true
   },
   {
-    name: "Consultoria Premium",
-    price: "Consulte",
-    desc: "Acompanhamento 1:1",
-    features: ["Tudo do VIP", "Videochamada Mensal", "Ajustes Semanais", "Vagas Limitadas"],
+    name: "Plano Elite",
+    price: "R$ 00,00",
+    desc: "Acompanhamento VIP",
+    features: ["Vantagem 1", "Vantagem 2", "Vantagem 3"],
     recommended: false
   }
 ];
+
+export const IMAGES = {
+  heroBg: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=2069&auto=format&fit=crop",
+  method: "https://images.unsplash.com/photo-1594882645126-14020914d58d?q=80&w=2085&auto=format&fit=crop",
+  about: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop",
+  cta: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop"
+};

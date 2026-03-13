@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { Star, ArrowRight, Play } from 'lucide-react';
 import { Button } from '../ui/base';
-import { SITE_CONFIG } from '../../constants';
+import { SITE_CONFIG, IMAGES } from '../../constants';
 
 export const Hero = () => {
   return (
@@ -10,8 +10,8 @@ export const Hero = () => {
       {/* Background Image with Enhanced Overlay */}
       <div className="absolute inset-0 z-0 scale-105">
         <img 
-          src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=2070&auto=format&fit=crop" 
-          alt="Mulher treinando com foco" 
+          src={IMAGES.heroBg} 
+          alt="Treino focado" 
           className="w-full h-full object-cover opacity-30 object-center"
           referrerPolicy="no-referrer"
         />
@@ -30,13 +30,13 @@ export const Hero = () => {
             <span className="text-primary text-xs font-black uppercase tracking-widest">Inscrições Abertas - Vagas Limitadas</span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] mb-8 tracking-tighter">
-            SEQUE A POCHETE <br />
-            <span className="text-primary italic">SEM SOFRIMENTO.</span>
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-black leading-[0.9] mb-8 tracking-tighter uppercase">
+            DESCRIÇÃO DO SEU <br />
+            <span className="text-primary italic">OBJETIVO PRINCIPAL.</span>
           </h1>
           
           <p className="text-xl md:text-2xl text-zinc-400 mb-12 max-w-xl leading-relaxed">
-            O método <span className="text-white font-bold">SlimFit28</span> foi feito para mulheres reais que não têm tempo para passar horas na academia.
+            Explique como o seu método <span className="text-white font-bold">{SITE_CONFIG.methodName}</span> ajuda pessoas reais a alcançarem resultados de forma sustentável.
           </p>
           
           <div className="flex flex-col sm:flex-row items-center gap-6">
@@ -50,7 +50,7 @@ export const Hero = () => {
                 {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-current" />)}
               </div>
               <p className="text-sm font-bold text-zinc-500 uppercase tracking-tighter">
-                +250 Alunas Satisfeitas
+                +250 Alunos Satisfeitos
               </p>
             </div>
           </div>
@@ -64,7 +64,7 @@ export const Hero = () => {
         >
           <div className="relative z-10 rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl skew-y-2">
             <img 
-              src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?q=80&w=2070&auto=format&fit=crop" 
+              src={IMAGES.cta} 
               alt="Treino eficiente" 
               className="w-full h-auto"
               referrerPolicy="no-referrer"
